@@ -17,10 +17,10 @@ const userSchema = new mongoose.Schema({
       required: true
     },
   
-    password: {
-    type: String,
-    required: true
-    },
+    // password: {
+    // type: String,
+    // required: true
+    // },
 
     register_date: {
     type: Date,

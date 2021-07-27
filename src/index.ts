@@ -5,9 +5,9 @@ import { resolvers } from './resolvers'
 import { typeDefs } from './typeDefs'
 import cors from'cors';
 import routes from './routes';
+import dotenv from 'dotenv';
 
-
-
+dotenv.config();
 
 
 
