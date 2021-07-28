@@ -9,6 +9,8 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+const PORT = process.env.PORT || 4000;
+
 
 
 
@@ -18,7 +20,7 @@ async function startApolloServer(typeDefs: any, resolvers: any) {
     const server = new ApolloServer({ typeDefs, resolvers });
     await server.start();
     server.applyMiddleware({ app });
-    app.listen(4000, ()=>{
+    app.listen(PORT, ()=>{
             console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
         });
     
