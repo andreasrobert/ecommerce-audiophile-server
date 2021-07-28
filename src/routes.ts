@@ -2,17 +2,21 @@ import express from 'express';
 // import mongoose from 'mongoose';
 // import jwt from 'jsonwebtoken';
 import auth from './auth';
-// import verify from './verifyToken';
+import verify from './verifyToken';
 import Product from "./models/product";
 
 
 const router = express.Router();
+router.get('/admin', verify)
 
 router.get('/', (_,res) =>{
     res.send("hello there");
 })
 
+
 router.post('/checkout', auth)
+router.post('/checkout/product', auth)
+
 router.post('/admin/login', auth)
 
 
