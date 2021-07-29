@@ -21,7 +21,7 @@ async function startApolloServer(typeDefs: any, resolvers: any) {
     await server.start();
     server.applyMiddleware({ app });
     app.listen(PORT, ()=>{
-            console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
+            console.log(`🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`)
         });
     
     // app.use('/static', express.static('public'));
