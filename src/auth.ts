@@ -91,10 +91,10 @@ router.post('/admin/login', async ( req, res) => {
 
     try{
 
-        const token = jwt.sign({_id: admin._id}, `${process.env.TOKEN_SECRET}` ,{ expiresIn: '400s' });
+        const token = jwt.sign({_id: admin._id}, `${process.env.TOKEN_SECRET}` ,{ expiresIn: '500s' });
         // res.header("auth-token", token).send(token);
         const expiryTime = new Date((new Date()).getTime() + 400*1000);
-        res.cookie('token', token, {httpOnly: true, expires: expiryTime, domain: 'ecommerce-audiophile.netlify.app' });
+        res.cookie('token', token, {httpOnly: true, expires: expiryTime, secure: true, domain: 'ecommerce-audiophile.netlify.app' });
         res.redirect("https://ecommerce-audiophile.netlify.app/admin");
     } catch(error){
         res.status(500).send(error);
