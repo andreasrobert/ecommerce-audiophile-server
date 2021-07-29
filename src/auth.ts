@@ -95,7 +95,7 @@ router.post('/admin/login', async ( req, res) => {
         // res.header("auth-token", token).send(token);
         const expiryTime = new Date((new Date()).getTime() + 400*1000);
         res.cookie('token', token, {httpOnly: true, expires: expiryTime });
-        res.redirect("http://localhost:3000/admin");
+        res.redirect("https://ecommerce-audiophile.netlify.app/admin");
     } catch(error){
         res.status(500).send(error);
     }
