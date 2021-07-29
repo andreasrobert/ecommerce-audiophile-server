@@ -22,6 +22,7 @@ export default function (req:any, res:any, next:any) {
         // res.status(100).send(JSON.stringify({ result: true }))
         next();
     } catch(error){
-        res.status(400).send("Invalid token");
+        res.json({ result: false });
+        // res.status(400).send("Invalid token");
     }
 };
