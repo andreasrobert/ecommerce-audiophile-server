@@ -8,11 +8,8 @@ import routes from './routes';
 import dotenv from 'dotenv';
 
 dotenv.config();
-
 var PORT = Number(process.env.PORT || 4000);
 var HOST = process.env.HOST || '0.0.0.0';
-
-
 
 async function startApolloServer(typeDefs: any, resolvers: any) {
     mongoose.connect('mongodb+srv://robert1:one2three@nodetuts.fx0g8.mongodb.net/E-commerce?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
@@ -24,14 +21,10 @@ async function startApolloServer(typeDefs: any, resolvers: any) {
             console.log(`🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`)
         });
     
-    // app.use('/static', express.static('public'));
     app.use(cors());
     app.use(express.urlencoded({ extended: true }));
     app.use(express.json());
     app.use("/",routes);
-    
-
-
   }
 
   startApolloServer(typeDefs,resolvers)

@@ -2,17 +2,9 @@ import { gql } from "apollo-server-express";
 
 export const typeDefs = gql`
   type Query {
-    helloSomething: String!
-    cats: [Cat!]!
     products: [Product!]!
     productsbyCategory(category: String, new: Boolean): [Product]
     productsbyId(_id: ID, slug: String, new: Boolean): [Product]
-
-  }
-
-  type Cat {
-    id: ID!
-    name: String!
   }
 
   type ProductImage{
@@ -54,9 +46,5 @@ export const typeDefs = gql`
     includes: [Includes]
     gallery: Galleries
     others: [Others]
-  }
-
-  type Mutation {
-    createCat(name: String!): Cat!
   }
 `;
