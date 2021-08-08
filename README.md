@@ -1,4 +1,7 @@
 ## audiophile - server side
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b9f4cc97-5eca-4276-9ac3-49b412365ca7/deploy-status)](https://app.netlify.com/sites/ecommerce-audiophile/deploys)
+
+[ecommerce-audiophile.netlify.app](https://ecommerce-audiophile.netlify.app/)
 
 See also the [client side](https://github.com/andreasrobert/ecommerce-audiophile-client)
 
