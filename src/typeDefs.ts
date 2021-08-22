@@ -7,31 +7,31 @@ export const typeDefs = gql`
     productsbyId(_id: ID, slug: String, new: Boolean): [Product]
   }
 
-  type ProductImage{
+  type ProductImage {
     mobile: String
     tablet: String
     desktop: String
     tabletCat: String
   }
 
-  type Includes{
+  type Includes {
     item: String
     quantity: Int
   }
 
-  type Galleries{
-      first: ProductImage
-      second: ProductImage
-      third: ProductImage
+  type Galleries {
+    first: ProductImage
+    second: ProductImage
+    third: ProductImage
   }
 
-  type Others{
+  type Others {
     slug: String
     name: String
     image: ProductImage
   }
 
-  type Product{
+  type Product {
     _id: ID
     id: String
     slug: String
